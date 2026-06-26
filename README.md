@@ -1,6 +1,36 @@
-# Carepluse - Healthcare Management Application
+# Carepluse 🏥
 
-A full-stack MERN healthcare management platform for patients, doctors, and administrators.
+A full-stack Healthcare Management Application built with the MERN 
+Stack (MongoDB, Express.js, React.js, Node.js). Carepluse enables 
+patients, doctors, and admins to manage healthcare operations 
+seamlessly with role-based access control and JWT authentication.
+
+## Features
+
+### 🔐 Authentication & Roles
+- Role-based Registration & Login — Patient, Doctor, Admin
+- JWT Authentication with role-based protected routes
+- Secure Admin registration with secret key validation
+
+### 🧑‍⚕️ Patient Features
+- Book appointments with preferred doctor or specialist
+- Filter doctors by specialization
+- View and download medical reports as PDF
+- Mark favourite doctors with star/bookmark
+- View appointment history
+
+### 👨‍⚕️ Doctor Features
+- View all assigned patient appointments
+- Update appointment status — Pending, Confirmed, Completed, Cancelled
+- Create, view and edit patient reports
+- View full patient history
+- Edit own profile — specialization, fee, bio, photo
+
+### 🛡️ Admin Features
+- Manage all patients, doctors and appointments
+- Book appointments on behalf of patients
+- Dashboard with total stats — patients, doctors, appointments
+- Full control over platform data
 
 ## Tech Stack
 
@@ -97,27 +127,6 @@ npm run dev
 | Patient | Register at `/register` | — |
 | Doctor | Created by admin | Set by admin |
 
-## User Roles & Features
-
-### Patient
-- Register and login
-- Book appointments with doctors
-- View upcoming and past appointments
-- View medical records/history
-
-### Doctor
-- Login (account created by admin)
-- View assigned appointments
-- Update status: Pending → Confirmed → Completed / Cancelled
-- Add diagnosis & prescription on completion
-
-### Admin
-- Login with hardcoded credentials
-- Dashboard with stats (patients, doctors, appointments)
-- Add, activate/deactivate, and delete doctors
-- View all patients
-- View and delete appointments
-
 ## API Endpoints (Postman-ready)
 
 ### Auth (Public)
@@ -169,7 +178,21 @@ npm run build
 # Start server in production
 cd ../server
 NODE_ENV=production npm start
+
+## Roles & Access
+
+| Feature                  | Patient  | Doctor  | Admin |
+|--------------------------|---------|---------|--------|
+| Book Appointment         | ✅      | ❌     | ✅    |
+| View Own Appointments    | ✅      | ✅     | ✅    |
+| Manage Reports           | View     |  Full  | ❌    |
+| Favourite Doctors        | ✅      | ❌     | ❌    |
+| Manage All Users         | ❌      | ❌     | ✅    |
+| Edit Doctor Profile      | ❌      | ✅     | ❌    |
 ```
+## Author
+Khushi Karanjiya
+www.linkedin.com/in/khushi-karanjiya-0b4304261/
 
 ## License
 
