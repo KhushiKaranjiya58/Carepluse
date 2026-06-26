@@ -191,6 +191,7 @@ NODE_ENV=production npm start
 | Manage All Users         | ❌      | ❌     | ✅    |
 | Edit Doctor Profile      | ❌      | ✅     | ❌    |
 ```
+```
 ## Author
 Khushi Karanjiya
 www.linkedin.com/in/khushi-karanjiya-0b4304261/
