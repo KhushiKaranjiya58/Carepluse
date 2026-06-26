@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-dark-bg text-slate-100 antialiased;
+  }
+
+  select option {
+    @apply bg-dark-card text-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-500 text-white font-medium py-2 px-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-surface hover:bg-dark-hover text-slate-200 font-medium py-2 px-4 rounded-lg transition-colors border border-dark-border;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-500 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 bg-dark-card border border-dark-border text-slate-100 placeholder-slate-500 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition;
+  }
+
+  .card {
+    @apply bg-dark-card rounded-xl shadow-lg border border-dark-border p-6;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-slate-100;
+  }
+
+  .text-muted {
+    @apply text-slate-400;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-300 mb-1;
+  }
+
+  .tab-btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .tab-btn-active {
+    @apply tab-btn bg-primary-600 text-white;
+  }
+
+  .tab-btn-inactive {
+    @apply tab-btn bg-dark-surface text-slate-300 border border-dark-border hover:bg-dark-hover;
+  }
+
+  .alert-success {
+    @apply bg-green-900/40 border border-green-700 text-green-300 px-4 py-3 rounded-lg;
+  }
+
+  .alert-error {
+    @apply bg-red-900/40 border border-red-700 text-red-300 px-4 py-3 rounded-lg;
+  }
+
+  .table-header {
+    @apply bg-dark-surface;
+  }
+
+  .table-row {
+    @apply border-t border-dark-border;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50;
+  }
+
+  .modal-content {
+    @apply bg-dark-card border border-dark-border rounded-xl p-6 max-w-md w-full shadow-2xl;
+  }
+
+  .link-accent {
+    @apply text-primary-400 hover:text-primary-300 hover:underline;
+  }
+}
