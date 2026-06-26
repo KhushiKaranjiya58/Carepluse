@@ -178,6 +178,7 @@ npm run build
 # Start server in production
 cd ../server
 NODE_ENV=production npm start
+```
 
 ## Roles & Access
 
